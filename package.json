@@ -1,0 +1,25 @@
+{
+  "name": "dapparatus-core",
+  "version": "1.0.0",
+  "repository": "https://github.com/austintgriffith/dapparatus-core.git",
+  "author": "Austin <austin.griffith@madwiremedia.com>",
+  "license": "MIT",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
+  }
+}
