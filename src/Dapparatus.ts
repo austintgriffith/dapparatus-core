@@ -22,6 +22,7 @@ export class Dapparatus {
   public readonly config: DapparatusConfig = {};
   public signer: Signer;
   public sign: (message: string, account: string) => void;
+  public recover: (message: string, sig: string) => void;
   public web3: any;
   public accounts!: string[];
   public address!: string;
@@ -31,6 +32,7 @@ export class Dapparatus {
     this.loadWeb3();
     this.signer = new Signer({web3: this.web3});
     this.sign = this.signer.sign;
+    this.recover = this.signer.recover;
   }
 
   public async init() {
